@@ -35,7 +35,7 @@ public class LargestPrimeFactor {
             }
         }
 
-        return new ArrayList(factors);
+        return factors;
     }
 
     private List<Integer> sieve(List<Integer> factors){
