@@ -7,10 +7,18 @@
 public class MultiplesOf3Or5 {
     public static void main(String[] args){
         MultiplesOf3Or5 m = new MultiplesOf3Or5();
-        m.test();
+        System.out.println(m.find(1000));
     }
 
-    private void test(){
-        System.out.println("test");
+    private int find(int max){
+        int sum = 0;
+
+        for(int i=0; i<max; i++){
+            if(i % 3 == 0) sum += i;
+            if(i % 15 == 0) continue;
+            if(i % 5 == 0) sum += i;
+        }
+
+        return sum;
     }
 }
